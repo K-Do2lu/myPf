@@ -1,0 +1,129 @@
+@import "../sass/_common.scss";
+
+.mainArea{
+    max-width: 100%;
+    height: 100vh;
+    .mainHeader{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 38px 40px;
+        box-sizing: border-box;
+        background: #FFF;
+        .subMenu{
+            display: flex;
+            gap: 36px;
+            span{
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+                color: #DEDEDE;
+								cursor: pointer;
+                &.subMenuActive{
+                    color: #303443;
+                }
+								&:hover{
+									color: #303443;
+								}
+            }
+        }
+    }
+		.mainBody{
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			height: calc(100% - 104px);
+			padding: 0 40px;
+			box-sizing: border-box;
+			.mainBx{
+				@include radius;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 100%;
+				height: calc(50% - 40px);
+				padding: 80px;
+				background: #3E4394;
+				background: url('@/assets/img/mainBg.png') no-repeat;
+				background-size: cover;
+				box-sizing: border-box;
+				.mainTxt{
+					span{
+						display: block;
+						font-size: 40px;
+						font-weight: bold;
+						color: #FFF;
+					}
+				}
+				.mainBtn{
+					display: flex;
+					gap: 16px;
+					span{
+						display: inline-block;
+						padding: 12px 24px;
+						border-radius: 50px;
+						background: #FFF;
+						color: #303443;
+						font-size: 20px;
+						font-weight: 600;
+						cursor: pointer;
+					}
+				}
+			} 
+			.mainWork{
+				width: 100%;
+				height: calc(50% - 40px);
+				display: flex;
+				gap: 40px;
+				.mainWorkBx{
+					@include radius;
+					width: calc(100% / 3);
+					height: 100%;
+					padding: 60px 40px;
+					box-sizing: border-box;
+					background: #303443;
+					.mainWorkBxHeader{
+						display: flex;
+						justify-content: space-between;
+						.mainWorkBxTitle{
+							display: inline-block;
+							font-size: 40px;
+							font-weight: bold;
+							color: #303443;
+						}
+						.mainWorkBxBtn{
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 50px;
+							height: 50px;
+							border-radius: 50%;
+							background: #FFF;
+							cursor: pointer;
+						}
+					}
+					&:nth-child(1){
+						.mainWorkBxTitle{
+							color: #FFF;
+						}
+						.mainWorkBxBtn{
+							background: url('@/assets/img/arrow.png') no-repeat;
+						}
+					}
+					&:nth-child(2){
+						background:#FFF;
+						.mainWorkBxBtn{
+							background: url('@/assets/img/arrow2.png') no-repeat;
+						}
+					}
+					&:nth-child(3){
+						background: #F1F1F1;
+						.mainWorkBxBtn{
+							background: url('@/assets/img/arrow3.png') no-repeat;
+						}
+					}
+				}
+			}
+			
+		}
+}
