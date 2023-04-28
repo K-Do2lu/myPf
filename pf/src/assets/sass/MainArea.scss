@@ -1,129 +1,94 @@
 @import "../sass/_common.scss";
 
-.mainArea{
-    max-width: 100%;
-    height: 100vh;
-    .mainHeader{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 38px 40px;
-        box-sizing: border-box;
-        background: #FFF;
-        .subMenu{
-            display: flex;
-            gap: 36px;
-            span{
-                display: inline-block;
-                font-size: 20px;
-                font-weight: bold;
-                color: #DEDEDE;
-								cursor: pointer;
-                &.subMenuActive{
-                    color: #303443;
-                }
-								&:hover{
-									color: #303443;
-								}
-            }
-        }
-    }
-		.mainBody{
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
-			height: calc(100% - 104px);
-			padding: 0 40px;
-			box-sizing: border-box;
-			.mainBx{
-				@include radius;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				width: 100%;
-				height: calc(50% - 40px);
-				padding: 80px;
-				background: #3E4394;
-				background: url('@/assets/img/mainBg.png') no-repeat;
-				background-size: cover;
-				box-sizing: border-box;
-				.mainTxt{
-					span{
-						display: block;
-						font-size: 40px;
-						font-weight: bold;
-						color: #FFF;
-					}
-				}
-				.mainBtn{
-					display: flex;
-					gap: 16px;
-					span{
-						display: inline-block;
-						padding: 12px 24px;
-						border-radius: 50px;
-						background: #FFF;
-						color: #303443;
-						font-size: 20px;
-						font-weight: 600;
-						cursor: pointer;
-					}
-				}
-			} 
-			.mainWork{
-				width: 100%;
-				height: calc(50% - 40px);
-				display: flex;
-				gap: 40px;
-				.mainWorkBx{
-					@include radius;
-					width: calc(100% / 3);
-					height: 100%;
-					padding: 60px 40px;
-					box-sizing: border-box;
-					background: #303443;
-					.mainWorkBxHeader{
-						display: flex;
-						justify-content: space-between;
-						.mainWorkBxTitle{
-							display: inline-block;
-							font-size: 40px;
-							font-weight: bold;
-							color: #303443;
-						}
-						.mainWorkBxBtn{
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							width: 50px;
-							height: 50px;
-							border-radius: 50%;
-							background: #FFF;
-							cursor: pointer;
-						}
-					}
-					&:nth-child(1){
-						.mainWorkBxTitle{
-							color: #FFF;
-						}
-						.mainWorkBxBtn{
-							background: url('@/assets/img/arrow.png') no-repeat;
-						}
-					}
-					&:nth-child(2){
-						background:#FFF;
-						.mainWorkBxBtn{
-							background: url('@/assets/img/arrow2.png') no-repeat;
-						}
-					}
-					&:nth-child(3){
-						background: #F1F1F1;
-						.mainWorkBxBtn{
-							background: url('@/assets/img/arrow3.png') no-repeat;
-						}
-					}
-				}
-			}
-			
+.mainContent{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 100%;
+	width: 100%; height: 100vh;
+	padding: 160px 120px 80px 120px;
+	box-sizing: border-box;
+	background: #F9F9F9;
+	.mainTxtBx{
+		span{
+			display: block;
 		}
+		.mainTxt{
+			position: relative;
+			padding-bottom: 24px;
+			font: {
+				size: 120px;
+				weight: bold;
+			}
+			&::after{
+				position: absolute;
+				content: '';
+				width: 48px; height: 48px;
+				background: url('@/assets/img/mainTxtAfter.png')no-repeat;
+			}
+		}
+		.mainSubtxt{
+			line-height: 49.25px;
+			font: {
+				size: 32px;
+				weight: 500;
+			}
+		}
+	}
+	.mainBtnBx{
+		display: flex;
+		justify-content: space-between;
+		.mainBtns{
+			display: flex;
+			gap: 18px;
+			.mainBtn{
+				padding: 16px 36px;
+				font: {
+					size: 32px;
+					weight: 600;
+				}
+				border: 2px solid #ECECEC;
+				border-radius: 18px;
+				background: #F1F1F1;
+				box-sizing: border-box;
+			}
+		}
+		.btn-secondary{
+			display: flex;
+			align-items: center;
+			text-align: center;
+			background: #ed2553;
+			border-radius: 18px;
+			border: 2px solid #FF9FB5;
+			box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+			padding: 16px 36px;
+			font-size: 18px;
+			cursor: pointer;
+			outline: none;
+			color: #ffffff;
+			text-decoration: none;
+			-webkit-transition: 0.3s ease;
+			transition: 0.3s ease;
+			&:hover{
+				transform: translateY(-3px);
+			}
+			.fa{
+				display: inline-block;
+				margin-right: 5px;
+				width: 32px;
+				height: 32px;
+				background: url('@/assets/img/heart.png');
+			}
+		}
+	}
+}
+.animateLike {
+	animation-name: likeAnimation;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 0.65s;
+}
+@keyframes likeAnimation {
+	0%   { transform: scale(10); }
+	100% { transform: scale(1); }
 }

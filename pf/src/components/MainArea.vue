@@ -1,76 +1,55 @@
 <template>
-  <div class="mainArea">
-    <div class="mainHeader">
-      <div class="logo"><img src="../assets/img/logo.png" alt="logo"></div>
-      <div class="subMenu">
-        <span class="subMenuActive">Home</span>
-        <span>About</span>
-        <span>Work</span>
-        <span>Contact</span>
-      </div>
+  <div class="mainContent">
+    <div class="mainTxtBx">
+      <span class="mainTxt">Kdy2da</span>
+      <span class="mainSubtxt">안녕하십니까, 여긴 제 포트폴리오 공간입니다.</span>
+      <span class="mainSubtxt">UI/UX Design 및 Publishing을 하고 있습니다. 그럼 enjoy</span>
     </div>
-    <div class="mainBody">
-
-      <div class="mainBx">
-        <div class="mainTxt">
-          <span>Hi,hello!</span>
-          <span>This is my portfolio.</span>
-          <span>Enjoy youtself!😄</span>
-        </div>
-        
-        <div class="mainBtn">
-          <span>ㅈㄳㄳ</span>
-          <span>ㅇㄽ</span>
-        </div>
+    <div class="mainBtnBx">
+      <div class="mainBtns">
+        <div class="mainBtn">All</div>
+        <div class="mainBtn">UI/UX Design</div>
+        <div class="mainBtn">Project</div>
+        <div class="mainBtn">Work</div>
       </div>
-
-      <div class="mainWork">
-        <div class="mainWorkBx" v-for="(item, index) in mainWorkBx" :key="index">
-          <div class="mainWorkBxHeader">
-            <span class="mainWorkBxTitle">{{item.title}}</span>
-            <!-- <router-link to="/WorkArea"></router-link> -->
-            <span class="mainWorkBxBtn" @click="workShow(index)"></span>
-          </div>
-          <div class="mainWorkBxBody"></div>
-        </div>
-      </div>
+      <button class="btn-secondary like-review"  @click="likeBtn">
+        <i class="fa fa-heart" aria-hidden="true" ref="myButton" :class="{ animateLike: isActive }"></i>{{likeNum}}
+      </button>
     </div>
   </div>
-  <WorkArea v-if="show" :divIndex="selectedDivIndex"></WorkArea>
 </template>
 
 <script>
-import WorkArea from '../components/WorkArea.vue';
 export default {
   name: 'MainArea',
-  props: {
-  },
-  components: {
-    WorkArea
-  },
+  props: {},
+  components: {},
   data() {
     return{
-      mainWorkBx: [
-        {title: 'UI/UX Design',},
-        {title: 'Project',},
-        {title: 'Work',},
-      ],
-      show:'',
-      selectedDivIndex: null,
+      likeNum: 0,
+      isActive: false,
     }
   },
   methods: {
-    workShow(divIndex) {
-    this.selectedDivIndex = divIndex;
-    this.show = !this.show;
+    likeBtn() {
+      this.likeNum++;
+      this.isActive = true;
+
+      // 1초 후에 isActive를 false로 변경하고 애니메이션 클래스를 제거합니다.
+      setTimeout(() => {
+        this.isActive = false;
+        const buttonEl = this.$refs.myButton;
+        buttonEl.classList.remove("animateLike");
+      }, 500);
+
+      // 애니메이션 클래스를 추가합니다.
+      const buttonEl = this.$refs.myButton;
+      buttonEl.classList.add("animateLike");
+    },
   },
-  },
- 
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/sass/MainArea.scss";
-
-
 </style>
