@@ -1,23 +1,24 @@
 @import "../sass/_common.scss";
-
 .mainContent{
 	display: flex;
+	flex: 0 0 auto;
 	flex-direction: column;
 	justify-content: space-between;
 	max-width: 100%;
 	width: 100%; height: 100vh;
-	padding: 160px 120px 80px 120px;
+	// padding: 160px 120px 80px 120px;
+	padding: 10rem 7.5rem 5rem;
 	box-sizing: border-box;
-	background: #F9F9F9;
+	background: #FFF;
 	.mainTxtBx{
 		span{
 			display: block;
 		}
 		.mainTxt{
 			position: relative;
-			padding-bottom: 24px;
+			padding-bottom: 2vw;
 			font: {
-				size: 120px;
+				size: 7.5rem;
 				weight: bold;
 			}
 			&::after{
@@ -36,50 +37,64 @@
 		}
 	}
 	.mainBtnBx{
+		max-width: 100% !important;
 		display: flex;
 		justify-content: space-between;
+		box-sizing: border-box;
+		background: #333;
 		.mainBtns{
 			display: flex;
-			gap: 18px;
 			.mainBtn{
-				padding: 16px 36px;
+				@media (max-width: 1192px){
+					font-size: 1.5rem;
+				}
+				padding: 1rem 2.25rem;
+				margin-right: 1.25rem;
+				cursor: pointer;
+				&:hover{
+					background: #cecece;
+				}
+				&.isActive{
+					background: #cecece;
+				}
 				font: {
-					size: 32px;
+					size: 2rem;
 					weight: 600;
 				}
 				border: 2px solid #ECECEC;
 				border-radius: 18px;
 				background: #F1F1F1;
 				box-sizing: border-box;
+				white-space: nowrap;
 			}
 		}
-		.btn-secondary{
-			display: flex;
-			align-items: center;
-			text-align: center;
-			background: #ed2553;
-			border-radius: 18px;
-			border: 2px solid #FF9FB5;
-			box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
-			padding: 16px 36px;
-			font-size: 18px;
-			cursor: pointer;
-			outline: none;
-			color: #ffffff;
-			text-decoration: none;
-			-webkit-transition: 0.3s ease;
-			transition: 0.3s ease;
-			&:hover{
-				transform: translateY(-3px);
-			}
-			.fa{
-				display: inline-block;
-				margin-right: 5px;
-				width: 32px;
-				height: 32px;
-				background: url('@/assets/img/heart.png');
-			}
-		}
+	}
+}
+.btn-secondary{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	background: #ed2553;
+	border-radius: 18px;
+	border: 2px solid #FF9FB5;
+	box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+	padding: 1rem 1.25rem;
+	font-size: 1.125rem;
+	cursor: pointer;
+	outline: none;
+	color: #ffffff;
+	text-decoration: none;
+	-webkit-transition: 0.3s ease;
+	transition: 0.3s ease;
+	&:hover{
+		transform: translateY(-3px);
+	}
+	.fa{
+		display: inline-block;
+		margin-right: 5px;
+		width: 32px;
+		height: 32px;
+		background: url('@/assets/img/heart.png');
 	}
 }
 .animateLike {

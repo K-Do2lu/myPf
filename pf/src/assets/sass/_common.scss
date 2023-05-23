@@ -4,9 +4,19 @@
     font-family: 'Montserrat';
     color: #333;
 }
+html{
+    font-size: 16px;
+}
 // @mixin
 @mixin radius{
     background: inherit;
     border-radius: 40px;
     box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.1);
 }
+
+//media
+@media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
