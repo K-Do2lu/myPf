@@ -3,6 +3,10 @@
     margin: 0;
     font-family: 'Montserrat';
     color: #333;
+    &::selection {
+        background: #FD9500;
+        color: #FFF;
+    }
 }
 html{
     font-size: 16px;

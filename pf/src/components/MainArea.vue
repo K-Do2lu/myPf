@@ -1,10 +1,20 @@
 <template>
   <div class="mainContent">
-    <div class="mainTxtBx">
-      <span class="mainTxt">Kdy2da</span>
-      <!-- <span class="mainSubtxt">안녕하십니까, 여긴 제 포트폴리오 공간입니다.</span> -->
-      <!-- <span class="mainSubtxt">UI/UX Design 및 Publishing을 하고 있습니다. 그럼 enjoy</span> -->
+    <video src="../assets/img/mainVideo.mp4" autoplay muted loop></video>
+
+   <div class="mainUserBx">
+    <div class="mainUser"></div>   
+
+    <div class="mainUserTxtBx">
+      <span class="userName">do2lu</span>
+      <span class="userEmail">kdy992da@naver.com</span>
+
+      <div class="mainUserInfos">
+        <div class="mainUserProfile">Profile</div>
+        <div class="mainUserCareer">Career</div>
+      </div>
     </div>
+   </div>
 
 
     <div class="mainBtnBx">
