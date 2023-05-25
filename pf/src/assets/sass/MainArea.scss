@@ -78,6 +78,10 @@
 					background: #FFF;
 					padding: 8px 12px;
 					box-sizing: border-box;
+					cursor: pointer;
+					&:hover{
+						background: rgba(255,255,255,0.3);
+					}
 				}
 				.mainUserCareer{
 					padding: 8px 12px;
@@ -85,10 +89,15 @@
 					border-radius: 50px;
 					border: 2px solid #cbc6fc;
 					background: #EDECF9;
+					cursor: pointer;
 					color: #4D44C6;
 					font: {
 						size: 16px;
 						weight: 600;
+					}
+					&:hover{
+						background: #4D44C6;
+						color: #FFF;
 					}
 				}
 			}
@@ -123,9 +132,10 @@
 					background: #FFF;
 				}
 				&.isActive{
-					border: 1px solid #9DABFF;
+					border: 2px solid #9DABFF;
 					background: #EDECF9;
 					color: #4D44C6;
+					box-sizing: border-box;
 				}
 				font: {
 					size: 20px;

@@ -10,8 +10,8 @@
       <span class="userEmail">kdy992da@naver.com</span>
 
       <div class="mainUserInfos">
-        <div class="mainUserProfile">Profile</div>
-        <div class="mainUserCareer">Career</div>
+        <div class="mainUserProfile" @click="openPopup">Profile</div>
+        <div class="mainUserCareer" @click="openPopup2">Career</div>
       </div>
     </div>
    </div>
@@ -37,7 +37,9 @@
 </template>
 
 <script>
-import WorkArea from '../components/WorkArea.vue'
+import WorkArea from '../components/WorkArea.vue';
+import pdfUrl from '../assets/img/aboutMe.pdf';
+import pdfUrl2 from '../assets/img/career.pdf';
 
 export default {
 name: 'MainArea',
@@ -85,29 +87,43 @@ methods: {
       });
     }
   },
+
+  //좋아요 버튼
   likeBtn() {
     this.likeNum++;
     this.isActive = true;
     
-    // 1초 후에 isActive를 false로 변경하고 애니메이션 클래스를 제거합니다.
+    // 1초 후에 isActive를 false로 변경하고 애니메이션 클래스를 제거
     setTimeout(() => {
       this.isActive = false;
       const buttonEl = this.$refs.myButton;
       buttonEl.classList.remove("animateLike");
     }, 500);
 
-    // 애니메이션 클래스를 추가합니다.
+    // 애니메이션 클래스를 추가
     const buttonEl = this.$refs.myButton;
     buttonEl.classList.add("animateLike");
 
     // likeNum 값을 로컬 스토리지에 저장
     localStorage.setItem('likeNum', this.likeNum.toString());
     
-    //100단위로 alert창 표시
+    //n단위로 alert창 표시
     if(this.likeNum % 10 === 0){
-      alert('오이오이 날 너무 좋아하네');
+      alert('날 너무 좋아하네');
+    }else if(this.likeNum % 15 === 0) {
+      alert('5252 고마해');
     }
   },
+  //openPopup
+  //추후 매개변수로 소스 수정 예정
+  openPopup() {
+      window.open(pdfUrl, '_blank', 'toolbar=no,scrollbars=yes,resizable=yes,top=100,left=100,width=600,height=800');
+    },
+  openPopup2() {
+    window.open(pdfUrl2, '_blank', 'toolbar=no,scrollbars=yes,resizable=yes,top=100,left=100,width=600,height=800');
+  },
+    
+
 },
 }
 </script>
