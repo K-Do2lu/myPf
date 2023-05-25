@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>123</div>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 @import "../assets/sass/WorkAbout.scss";
 
 </style>

@@ -110,8 +110,6 @@ methods: {
     //n단위로 alert창 표시
     if(this.likeNum % 10 === 0){
       alert('날 너무 좋아하네');
-    }else if(this.likeNum % 15 === 0) {
-      alert('5252 고마해');
     }
   },
   //openPopup
