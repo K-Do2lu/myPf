@@ -1,6 +1,7 @@
 <template>
   <div class="contactContent">
     <div class="contactBx">
+      <!-- screenWidth가 500px 이상일 때 .contactTxt 요소를 보여줍니다 -->
       <div
         class="contactTxt"
         v-show="showContactTxt"
@@ -8,6 +9,7 @@
       >
         <span>잇쇼니 간바뗑 뿌뿌~🤪</span>
       </div>
+      <!-- screenWidth가 500px 미만일 때 .contactIcon 요소를 보여줍니다 -->
       <div
         class="contactIcon"
         v-show="!showContactTxt"
@@ -27,13 +29,13 @@ export default {
   name: 'ContactArea',
   data() {
     return {
-      showContactTxt: false,
-      iconClicked: false,
+      showContactTxt: false, // .contactTxt 요소를 보여줄지 여부를 나타내는 데이터 속성
+      iconClicked: false, // .contactIcon이 클릭되었는지 여부를 나타내는 데이터 속성
     };
   },
   mounted() {
     window.addEventListener('resize', this.handleResize);
-    this.handleResize();
+    this.handleResize(); // 초기 해상도에 따라 .contactTxt를 보여줄지 설정
   },
   unmounted() {
     window.removeEventListener('resize', this.handleResize);
@@ -41,11 +43,11 @@ export default {
   methods: {
     handleResize() {
       const screenWidth = window.innerWidth;
-      this.showContactTxt = screenWidth >= 500;
+      this.showContactTxt = screenWidth >= 500; // screenWidth가 500px 이상이면 .contactTxt를 보여줌
     },
     toggleContactTxt() {
-      this.iconClicked = true;
-      this.showContactTxt = true;
+      this.iconClicked = true; // .contactIcon이 클릭되었음을 표시
+      this.showContactTxt = true; // .contactTxt를 보여줌
     },
   },
 };
