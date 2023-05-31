@@ -22,9 +22,9 @@
         <div class="mainBtn" @click="toggleBComponent(null)" :class="{ isActive: selectedId === null && selectedBtn }">All</div>
         <div class="mainBtn" @click="toggleBComponent(1)" :class="{ isActive: selectedId === 1 && selectedBtn }">UI/UX Design</div>
         <div class="mainBtn" @click="toggleBComponent(2)" :class="{ isActive: selectedId === 2 && selectedBtn }">Project</div>
-        <div class="mainBtn" @click="toggleBComponent(3)" :class="{ isActive: selectedId === 3 && selectedBtn }">Work</div>
+        <div class="mainBtn" @click="toggleBComponent(3)" :class="{ isActive: selectedId === 3 && selectedBtn }">Etc</div>
         <button class="btn-secondary like-review" @click="likeBtn">
-          <i class="fa fa-heart" aria-hidden="true" ref="myButton" :class="{ animateLike: isActive }"></i>{{ likeNum }}
+          <i class="fa fa-heart" aria-hidden="true" ref="myButton"></i>{{ likeNum }}
         </button>
       </div>
     </div>
@@ -57,7 +57,7 @@ export default {
       pdfUrls: {
         aboutMe: pdfUrl,
         career: pdfUrl2
-      }
+      },
     };
   },
   created() {

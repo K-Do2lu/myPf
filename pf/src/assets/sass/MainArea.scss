@@ -209,3 +209,9 @@
 	0%   { transform: scale(10); }
 	100% { transform: scale(1); }
 }
+.mainUserContact.active{
+	display: inline-block;
+    margin: 0 0.5rem;
+    animation: headShake; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+}
