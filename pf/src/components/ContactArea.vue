@@ -1,15 +1,15 @@
 <template>
   <div class="contactContent">
     <div class="contactBx">
-      <!-- screenWidth가 500px 이상일 때 .contactTxt 요소를 보여줍니다 -->
+      <!-- screenWidth가 500px 이상일 때 .contactTxt 요소를 보여줌 -->
       <div
         class="contactTxt"
         v-show="showContactTxt"
         :class="{ active: showContactTxt && iconClicked }"
       >
-        <span>잇쇼니 간바뗑 뿌뿌~🤪</span>
+        <span>픽미픽미픽미업💌</span>
       </div>
-      <!-- screenWidth가 500px 미만일 때 .contactIcon 요소를 보여줍니다 -->
+      <!-- screenWidth가 500px 미만일 때 .contactIcon 요소를 보여줌 -->
       <div
         class="contactIcon"
         v-show="!showContactTxt"

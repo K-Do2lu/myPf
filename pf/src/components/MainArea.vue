@@ -1,6 +1,6 @@
 <template>
   <div class="mainContent">
-    <video src="../assets/img/mainVideo.mp4" autoplay muted loop></video>
+    <video src="../assets/img/mainHandsLove.mp4" autoplay muted loop></video>
 
     <div class="mainUserBx">
       <div class="mainUser"></div>
@@ -37,7 +37,7 @@
 <script>
 import WorkArea from '../components/WorkArea.vue';
 import ContactArea from '../components/ContactArea.vue';
-import pdfUrl from '../assets/img/aboutMe.pdf';
+import pdfUrl from '../assets/img/aboutMe2.pdf';
 import pdfUrl2 from '../assets/img/career.pdf';
 
 export default {
