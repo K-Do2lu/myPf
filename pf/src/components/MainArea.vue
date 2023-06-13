@@ -38,7 +38,7 @@
 import WorkArea from '../components/WorkArea.vue';
 import ContactArea from '../components/ContactArea.vue';
 import pdfUrl from '../assets/img/aboutMe2.pdf';
-import pdfUrl2 from '../assets/img/career.pdf';
+import pdfUrl2 from '../assets/img/career2.pdf';
 
 export default {
   name: 'MainArea',
