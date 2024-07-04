@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  color: inherit;
+}
+*::-moz-selection {
+  background: #FD9500;
+  color: #FFF;
+}
+*::selection {
+  background: #FD9500;
+  color: #FFF;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+.mainContent {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  padding: 5vw;
+  box-sizing: border-box;
+}
+.mainContent video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.mainContent .mainUserBx {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 24px;
+  margin-top: 12vw;
+}
+@media (max-width: 430px) {
+  .mainContent .mainUserBx {
+    flex-direction: column;
+  }
+}
+.mainContent .mainUserBx .mainUser {
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  background: url("@/assets/img/user.jpg") no-repeat 30%;
+  box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.1);
+}
+@media (max-width: 430px) {
+  .mainContent .mainUserBx .mainUserTxtBx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.mainContent .mainUserBx .mainUserTxtBx span {
+  display: block;
+}
+.mainContent .mainUserBx .mainUserTxtBx .userName {
+  margin-bottom: 12px;
+  font-size: 40px;
+  font-weight: 700;
+}
+.mainContent .mainUserBx .mainUserTxtBx .userEmail {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
+}
+.mainContent .mainUserBx .mainUserTxtBx .mainUserInfos {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+.mainContent .mainUserBx .mainUserTxtBx .mainUserInfos .mainUserProfile {
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #e2e2e2;
+  border-radius: 8px;
+  background: #FFF;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.mainContent .mainUserBx .mainUserTxtBx .mainUserInfos .mainUserProfile:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.mainContent .mainUserBx .mainUserTxtBx .mainUserInfos .mainUserCareer {
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  border: 2px solid #cbc6fc;
+  background: #EDECF9;
+  cursor: pointer;
+  color: #4D44C6;
+  font-size: 16px;
+  font-weight: 600;
+}
+.mainContent .mainUserBx .mainUserTxtBx .mainUserInfos .mainUserCareer:hover {
+  background: #4D44C6;
+  color: #FFF;
+}
+.mainContent .mainUserBx .mainUserTxtBx .mainUserInfos .mainUserContact {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(51, 51, 51, 0.3);
+  box-sizing: border-box;
+  color: #FFF;
+  cursor: pointer;
+}
+.mainContent .mainUserBx .mainUserTxtBx .mainUserInfos .mainUserContact:hover {
+  background: rgba(51, 51, 51, 0.6);
+}
+.mainContent .mainBtnBx {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.mainContent .mainBtnBx .mainBtns {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .mainContent .mainBtnBx .mainBtns {
+    justify-content: center;
+  }
+}
+@media (max-width: 1011px) {
+  .mainContent .mainBtnBx .mainBtns {
+    flex-wrap: wrap;
+  }
+}
+.mainContent .mainBtnBx .mainBtns .mainBtn {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 1vw 1.6vw;
+  border: 2px solid #ECECEC;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+}
+@media (max-width: 1011px) {
+  .mainContent .mainBtnBx .mainBtns .mainBtn {
+    flex-shirink: 0;
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 867px) {
+  .mainContent .mainBtnBx .mainBtns .mainBtn {
+    padding: 1.84vw 4.15vw;
+  }
+}
+.mainContent .mainBtnBx .mainBtns .mainBtn:hover {
+  background: #FFF;
+}
+.mainContent .mainBtnBx .mainBtns .mainBtn.isActive {
+  border: 2px solid #9DABFF;
+  background: #EDECF9;
+  color: #4D44C6;
+  box-sizing: border-box;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #ed2553;
+  border-radius: 18px;
+  border: 2px solid #FF9FB5;
+  box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+  padding: 1vw 2.5vw;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+.btn-secondary .fa {
+  display: inline-block;
+  margin-right: 5px;
+  width: 32px;
+  height: 32px;
+  background: url("@/assets/img/heart.png") no-repeat center;
+  background-size: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.animateLike {
+  animation-name: likeAnimation;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.65s;
+}
+
+@keyframes likeAnimation {
+  0% {
+    transform: scale(10);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.mainUserContact.active {
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: headShake; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}/*# sourceMappingURL=MainArea.css.map */

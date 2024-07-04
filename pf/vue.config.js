@@ -1,14 +1,14 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   chainWebpack: (config) => {
     config.module
-      .rule('pdf')
+      .rule("pdf")
       .test(/\.pdf$/)
-      .use('file-loader')
-      .loader('file-loader')
+      .use("file-loader")
+      .loader("file-loader")
       .tap((options = {}) => {
-        options.name = 'assets/pdf/[name].[hash:8].[ext]';
+        options.name = "assets/pdf/[name].[hash:8].[ext]";
         return options;
       });
   },
